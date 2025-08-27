@@ -11,22 +11,27 @@ public class Aluno_Service {
     private final Aluno_Repository alunoRepository;
 
       public Aluno_Service(Aluno_Repository alunoRepository) {
-        this.alunoRepository = alunoRepository;
+
+          this.alunoRepository = alunoRepository;
       }
 
       public List<Aluno> buscarAlunos (){
+
           return alunoRepository.findAll();
       }
 
       public Aluno salvarAluno(Aluno aluno){
-        return alunoRepository.save(aluno);
+
+          return alunoRepository.save(aluno);
       }
 
      public Aluno buscarAlunoId(Long id){
-        return alunoRepository.findById(id).orElse(null);
+
+          return alunoRepository.findById(id).orElse(null);
      }
 
      public void deletarAluno(Long id){
+
           alunoRepository.deleteById(id);
      }
 }
