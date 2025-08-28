@@ -21,7 +21,7 @@ public class AlunoController {
     }
 
     @PostMapping
-    public Aluno SalvarNovoAluno(@RequestBody Aluno dadosAlunos) {
+    public Aluno salvarNovoAluno(@RequestBody Aluno dadosAlunos) {
         return alunoService.salvarAluno(dadosAlunos);
     }
 
